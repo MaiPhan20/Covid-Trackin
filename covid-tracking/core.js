@@ -18,9 +18,9 @@ $.ajax({
         // dùng moment.js để chuyển đổi thời gian format
         var dateTime = moment(date).format('DD/MM/YYYY');
         $('#date').html(dateTime);
-        console.log("Số người chết: " + dead);
-        console.log("Số người nhiễm: " + cases)
-        console.log("Số người hồi phục: " + recover)
+        console.log("Number of deaths: " + dead);
+        console.log("Number of cases: " + cases)
+        console.log("Number of recovery cases: " + recover)
         $('#cases_number').html(cases);
         $('#recovery_number').html(recover);
         $('#death_number').html(dead);
@@ -80,7 +80,7 @@ function get_result() {
                 console.log(data_case);
                 var element = document.getElementById("result");
                 element.classList.add("mystyle");
-                $("#result").html("Số ca:  " + data_case + " | Hôm nay  " +data_case_today +  " <br> Số ca tử vong: " + data_deaths + " | " + " Hôm nay:  " + data_deaths_today + " <br>Số ca hồi phục: " +data_recovered + " | Hôm nay : " +data_recovered_today+ "</p>");
+                $("#result").html(": Number of cases: " + data_case + " | Today: " +data_case_today +  " <br> :Number of deaths: " + data_deaths + " | " + " Today:  " + data_deaths_today + "Number of recovery cases: " <br>: " +data_recovered + " | Today : " +data_recovered_today+ "</p>");
             }
 
         });
