@@ -9,7 +9,7 @@ $.ajax({
     dataType: 'json',
     data: "data",
     success: function (data) {
-        console.log("Get thành công")
+        console.log("Successful")
         // nếu thành công
         var date = data.lastUpdate;
         var dead = (data.deaths.value).toLocaleString();
@@ -80,12 +80,12 @@ function get_result() {
                 console.log(data_case);
                 var element = document.getElementById("result");
                 element.classList.add("mystyle");
-                $("#result").html(": Number of cases: " + data_case + " | Today: " +data_case_today +  " <br> :Number of deaths: " + data_deaths + " | " + " Today:  " + data_deaths_today + "Number of recovery cases: " <br>: " +data_recovered + " | Today : " +data_recovered_today+ "</p>");
+                $("#result").html("Number of cases: " + data_case + " | Today  " +data_case_today +  " <br> Number of deaths: " + data_deaths + " | " + " Today:  " + data_deaths_today + " <br>Number of recovery cases: " +data_recovered + " | Today : " +data_recovered_today+ "</p>");
             }
 
         });
     } else {
-        $('#result').html("Không có dữ liệu");
+        $('#result').html("No Data");
     }
 
 }
@@ -100,3 +100,4 @@ $.ajax({
        console.log(data);
     }
 });
+
